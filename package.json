@@ -2,7 +2,7 @@
   "name": "events-manager",
   "version": "1.0.0",
   "description": "events manager API",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "start:dev": "nodemon ./bin/www",
     "test": "echo \"Error: no test specified\" && exit 1"
