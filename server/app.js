@@ -1,5 +1,6 @@
-import express from 'express';
+// require all dependencies
 import logger from 'morgan';
+import express from 'express';
 import bodyParser from 'body-parser';
 
 
@@ -20,4 +21,4 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.get('*', (req, res) => res.status(200).send({ message: 'Welcome to the beginning of nothingness.' }));
 
 
-export default app;
+module.exports = app;
