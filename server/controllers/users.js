@@ -1,7 +1,7 @@
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcrypt';
 import models from '../models';
-import createAdmin from '../middlewares/admin';
+import createSuperAdmin from '../middlewares/admin';
 
 const secret = process.env.SECRET;
 
@@ -38,7 +38,7 @@ class User {
       .catch(error => res.status(500).send({ error: error.message }));
 
     if (email === 'alishaibu2002@gmail.com') {
-      return createAdmin(req, res);
+      return createSuperAdmin(req, res);
     }
     // creates a User,generate a token and hash the password
     bcrypt.hash(req.body.password, 10, (err, hash) => {
