@@ -3,7 +3,8 @@ import dotenv from 'dotenv';
 import logger from 'morgan';
 import express from 'express';
 import bodyParser from 'body-parser';
-import userRoutes from './routes/user';
+import userRoutes from './routes/users';
+import centerRoutes from './routes/centers';
 
 dotenv.config();
 
@@ -21,6 +22,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 
 userRoutes(app);
+centerRoutes(app);
 
 // Setup a default catch-all route that sends back a welcome message in JSON format.
 app.get('*', (req, res) => res.status(200).send({ message: 'Welcome to the beginning of nothingness.' }));

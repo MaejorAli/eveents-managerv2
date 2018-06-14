@@ -44,7 +44,7 @@ export default (sequelize, DataTypes) => {
     },
     isAvailable: {
       type: DataTypes.BOOLEAN,
-      deafaultValue: true,
+      defaultValue: true,
     },
   }, {
     classMethods: {
