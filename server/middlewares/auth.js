@@ -7,7 +7,7 @@ const verifyToken = (req, res, next) => {
   if (token) {
     jwt.verify(token, secret, (err, decoded) => {
       if (err) {
-        return res.status(400).send({ error: 'Oops,Your session has expired,please login again to Events-Manager' });
+        return res.status(400).send({ error: 'Your session has expired,please login again to Events-Manager' });
       }
       req.decoded = decoded;
       next();
